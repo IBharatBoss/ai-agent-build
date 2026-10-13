@@ -2676,8 +2676,8 @@ body:not(.dark-mode) .code-card {
             let brandName = (activeConfig && activeConfig.brandName) ? activeConfig.brandName : (document.getElementById('val-name')?.value.trim() || 'My AI');
 
             if (apiKey) {
-                const safeHash = `#k=${encodeURIComponent(apiKey)}&n=${encodeURIComponent(brandName)}&m=${encodeURIComponent(model)}`;
-                window.location.href = 'app.html' + safeHash;
+                 const queryStr = `?k=${encodeURIComponent(apiKey)}&n=${encodeURIComponent(brandName)}&m=${encodeURIComponent(model)}`;
+                window.location.href = 'app.html' + queryStr;
             } else {
                 window.location.href = 'app.html';
             }
